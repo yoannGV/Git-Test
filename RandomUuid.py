@@ -1,5 +1,10 @@
 import uuid
+import datetime
 
+
+file_Name = str(input("Please input a file path: "))
+file_timestamp = datetime.datetime.now().strftime('%d-%m-%Y-%H:%M:%S-')
+output_File = file_timestamp + file_Name
 number = range(1000)
 
 def randomUuid(output_File, number):
@@ -8,7 +13,9 @@ def randomUuid(output_File, number):
             i = str(uuid.uuid4())
             uuid_File.write(i + '\n')
 
-output_File = str(input("Please input a file path: "))
+
 randomUuid(output_File, number)
+
+
 
 
